@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from "gatsby";
 import Post from "../components/post";
-import Layout from "../components/layout";
+import Layout from "../components/layout"; 
 
 const Archive = ({data , pageContext}) => {
     const authorblogs = data.allMarkdownRemark.edges;
@@ -27,15 +27,15 @@ const Archive = ({data , pageContext}) => {
                     <div className="row row--25">
                         {authorblogs.map(blog => (
                             <div className="col-lg-4 col-md-6 col-12 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="0.8s" key={blog.node.fields.slug}>
-                                <Post 
+                                <Post
                                     content={{
-                                        ...blog.node.fields, 
+                                        ...blog.node.fields,
                                         ...blog.node.frontmatter,
                                         excerpt: blog.node.excerpt
                                     }}
                                 />
-                            </div>  
-                            
+                            </div>
+
                         ))}
                     </div>
                 </div>
