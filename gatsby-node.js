@@ -70,13 +70,13 @@ exports.createPages = ({actions, graphql}) => {
 
     return graphql(`
         {
-            allProjectJson {
-                edges {
-                    node {
-                        id
-                    }
-                }
+          allContentfulProjects {
+            edges {
+              node {
+                name
+              }
             }
+          }
 
             allChecProduct {
               edges {
@@ -113,19 +113,19 @@ exports.createPages = ({actions, graphql}) => {
         }
     `).then( res => {
         if (res.errors) return Promise.reject(res.errors)
-        const project = res.data.allProjectJson.edges
+        const project = res.data.allContentfulProjects.edges
         const posts = res.data.allMarkdownRemark.edges
         const products = res.data.allChecProduct.edges
 
          // Create Project Page
          project.forEach(({ node }) => {
-           console.log("project", node.id)
+           console.log("project", node.name)
             createPage({
                 // path: node.fields.slug,
-                path: `project/${slugify(node.id)}`,
+                path: `project/${slugify(node.name)}`,
                 component: templates.projectDetails,
                 context: {
-                    id: node.id
+                    name: node.name
                 }
             })
         })

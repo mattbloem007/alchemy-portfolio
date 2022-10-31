@@ -7,7 +7,7 @@ import logo from '../../data/images/logo/logo.png'
 const Contact = () => {
     const contactData = useStaticQuery(graphql`
         query contactDataQuery {
-            homedefaultJson(id: {eq: "contactus"}) {
+            homedefaultJson(name: {eq: "contactus"}) {
                 title
                 subtitle
             }

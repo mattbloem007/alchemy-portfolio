@@ -6,8 +6,8 @@ import { Controller, Scene } from 'react-scrollmagic';
 const Banner = () => {
     const banenrQueryData = useStaticQuery (graphql`
         query BannerDefaultQuery {
-                homedefaultJson(id: {eq: "main-banner"}) {
-                title    
+                homedefaultJson(name: {eq: "main-banner"}) {
+                title
                 subtitle
                 bgImage {
                     childImageSharp {
@@ -28,7 +28,7 @@ const Banner = () => {
             }
         }
     `);
-      
+
     // const BannerImages = banenrQueryData.homedefaultJson.bgImage.childImageSharp.fluid;
     const PortfolioImages = banenrQueryData.file.childImageSharp.fixed;
     const Title = banenrQueryData.homedefaultJson.title;
@@ -47,7 +47,7 @@ const Banner = () => {
                                     <h4 className="subtitle wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1000ms" dangerouslySetInnerHTML={{ __html: SubTitle }}></h4>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -63,8 +63,8 @@ const Banner = () => {
                     </Scene>
                 </Controller>
             </div>
-          
-           
+
+
         </div>
     )
 }

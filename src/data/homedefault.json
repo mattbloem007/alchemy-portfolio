@@ -1,6 +1,6 @@
 [
     {
-        "id": "main-banner",
+        "name": "main-banner",
         "title": "The Alchemy of <span class='color-primary' style=\"font-size: 67px;\">Remembrance</span>",
         "subtitle": "Living to create, learn, and explore the truth",
         "bgImage": "./images/banner/bg-image-02.jpg",
@@ -8,7 +8,7 @@
     },
 
     {
-        "id": "about",
+        "name": "about",
         "title": "Matthew Gabriel",
         "subtitle": "Traditional Medicine Man || Cacao Kuchina",
         "description": "Matthew Gabriel (MG) is a qualified medicine man (Sangoma and Cacao Kuchina), working with cellular nutrition a medicinal gateway to embodied Bliss.",
@@ -17,49 +17,49 @@
         "linkBUtton": "Send Message",
         "aboutData": [
             {
-                "id": "aboutinfo-1",
+                "name": "aboutinfo-1",
                 "iconName": "FiArrowRightCircle",
                 "label": "Birthday",
                 "value": "01.07.1990"
             },
             {
-                "id": "aboutinfo-2",
+                "name": "aboutinfo-2",
                 "iconName": "icon",
                 "label": "Age",
                 "value": "29"
             },
             {
-                "id": "aboutinfo-3",
+                "name": "aboutinfo-3",
                 "iconName": "icon",
                 "label": "Location",
                 "value": "Ave 11, New York, USA"
             },
             {
-                "id": "aboutinfo-3",
+                "name": "aboutinfo-3",
                 "iconName": "icon",
                 "label": "Interests",
                 "value": "PlayStation, Reading"
             },
             {
-                "id": "aboutinfo-3",
+                "name": "aboutinfo-3",
                 "iconName": "icon",
                 "label": "Study",
                 "value": "University of Chicago"
             },
             {
-                "id": "aboutinfo-4",
+                "name": "aboutinfo-4",
                 "iconName": "icon",
                 "label": "Degree",
                 "value": "Master"
             },
             {
-                "id": "aboutinfo-5",
+                "name": "aboutinfo-5",
                 "iconName": "icon",
                 "label": "Mail",
                 "value": "mymail@gmail.com"
             },
             {
-                "id": "aboutinfo-6",
+                "name": "aboutinfo-6",
                 "iconName": "icon",
                 "label": "Phone",
                 "value": "+77 022 177 05 05"
@@ -68,17 +68,17 @@
     },
 
     {
-        "id": "skill",
+        "name": "skill",
         "title": "In a <span class='theme-color'>short time</span>, I have been able to achieve excellence in all areas of development.",
         "description": "I provide cost-effective and high quality products to meet our Clients’ needs of timely We provide cost-effective and high quality products to meet our Clients’ needs of timely."
     },
     {
-        "id": "portfolio",
+        "name": "portfolio",
         "title": "Featured Works",
         "description": "In other words, the best marketing decision you can make is to have a product or business that fulfills a real and compelling need for a real and defined group of people — no matter how much tweaking and refining this takes.(c)"
     },
     {
-        "id": "chooseus",
+        "name": "chooseus",
         "imagegroup": [
             {
                 "image": "./images/others/why-1.jpg"
@@ -91,56 +91,56 @@
     },
 
     {
-        "id": "skillTwo",
+        "name": "skillTwo",
         "title": "My Skills in <span class='theme-color'>Years</span>",
         "description": "When the past gets its teeth into our daily life, it may get to grips with an astringent reality and adjust our timeline. By recognizing ourselves in the light of our history, we become aware of what we are.(c)"
     },
     {
-        "id": "testimonial",
+        "name": "testimonial",
         "title": "Steve Lehman",
         "subtitle": "CEO of Hiday Motors.",
         "description": "We were looking for a logo with a touch of modernism. Arlo grasped our needs and produced a stunning design. Awesome to work with Arlo. Incredibly organized, easy to communicate with, responsive with next iterations.",
         "bgImage": "./images/banner/bg-image-03.jpg"
     },
     {
-        "id": "brand",
+        "name": "brand",
         "brandGroup": [
             {
-                "id": "brand-01",
+                "name": "brand-01",
                 "image": "./images/brand/1.png"
             },
             {
-                "id": "brand-02",
+                "name": "brand-02",
                 "image": "./images/brand/2.png"
             },
             {
-                "id": "brand-03",
+                "name": "brand-03",
                 "image": "./images/brand/3.png"
             },
             {
-                "id": "brand-04",
+                "name": "brand-04",
                 "image": "./images/brand/4.png"
             },
             {
-                "id": "brand-01",
+                "name": "brand-01",
                 "image": "./images/brand/5.png"
             },
             {
-                "id": "brand-02",
+                "name": "brand-02",
                 "image": "./images/brand/6.png"
             },
             {
-                "id": "brand-03",
+                "name": "brand-03",
                 "image": "./images/brand/3.png"
             },
             {
-                "id": "brand-04",
+                "name": "brand-04",
                 "image": "./images/brand/4.png"
             }
         ]
     },
     {
-        "id": "contactus",
+        "name": "contactus",
         "title": "Get in Touch",
         "subtitle": "Crowds are the most difficult thing for me these days because I have to walk with my head down and my eyes averted. There's still that part of me that wants to hold my head up, make eye contact and smile. (c)"
     }

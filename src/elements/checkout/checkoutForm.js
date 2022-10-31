@@ -177,10 +177,10 @@ const CheckoutForm = ({firstName,
     onCaptureCheckout(checkoutToken.id, orderData);
   };
 
-  if (Object.entries(live).length !== 0) {
+  if (Object.entries(cart).length !== 0 && Object.entries(live).length !== 0) {
     componentProps = {
       email: value.email,
-      amount: parseFloat(1) * 100,
+      amount: parseFloat(cart.subtotal.raw) * 100,
       // metadata: {
       //   name,
       //   phone,

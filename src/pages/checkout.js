@@ -14,6 +14,7 @@ const Checkout = (props) => {
   const [options, setShippingOptions] = useState({})
   const [option, setShippingOption] = useState({})
   const [live, setLive] = useState({})
+  const [total, setTotal] = useState({})
   const mounted = useRef();
 
 
