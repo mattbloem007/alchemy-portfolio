@@ -9,7 +9,7 @@ const TagTemplate = ({data , pageContext}) => {
     const {tag} = pageContext;
     const pageHeader = `${totalCount} post ${(totalCount === 1) ? '':'s'} Tag By <span class="theme-color">${tag}</span>`;
     return (
-        <Layout>
+        <>
             <div className="rn-tag-post-area rn-section-gap bg-color-white">
                 <div className="container">
                     <div className="row">
@@ -24,14 +24,14 @@ const TagTemplate = ({data , pageContext}) => {
                                     </ul>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div className="row">
                         {tagsblogs.map((blog) => (
                         <Post column="col-lg-4 col-md-6 col-12 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="0.8s" key={blog.node.fields.slug}
                                 content={{
-                                    ...blog.node.fields, 
+                                    ...blog.node.fields,
                                     ...blog.node.frontmatter,
                                     excerpt: blog.node.excerpt
                                 }}
@@ -40,7 +40,7 @@ const TagTemplate = ({data , pageContext}) => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </>
     )
 }
 

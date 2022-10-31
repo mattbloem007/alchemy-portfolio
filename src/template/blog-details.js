@@ -20,7 +20,7 @@ const BlogDetails = ({data, pageContext}) => {
         title: title,
     };
     return (
-        <Layout>
+        <>
             <div className="blog-details-wrapper rn-section-gap bg-color-white">
                 <div className="container">
                     <div className="row">
@@ -100,7 +100,7 @@ const BlogDetails = ({data, pageContext}) => {
                     </div>*/}
                 </div>
             </div>
-        </Layout>
+        </>
     )
 }
 

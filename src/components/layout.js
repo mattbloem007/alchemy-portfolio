@@ -6,11 +6,13 @@ import HeaderSidebar from "../components/header/headerSidebar";
 import Footer from "../components/footer/footer";
 import '../scss/style.scss';
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+  console.log(";ayout props", props)
+  let {children, cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart} = props
   return (
     <div className="main-wrapper active-dark">
         <Client />
-        <Header />
+        <Header cart={cart} onUpdateCartQty={onUpdateCartQty} onRemoveFromCart={onRemoveFromCart} onEmptyCart={onEmptyCart}/>
         <HeaderSidebar />
         <main>{children}</main>
         <Footer />

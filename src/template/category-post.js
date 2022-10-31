@@ -10,7 +10,7 @@ const categoryPostList = ({data , pageContext}) => {
     const pageHeader = `${totalCount} post${(totalCount === 1) ? '':'s'} category with <span class="theme-color">${category}</span>`;
 
     return (
-        <Layout>
+        <>
             <div className="rn-category-post rn-section-gap bg-color-white">
                 <div className="container">
                     <div className="row">
@@ -31,7 +31,7 @@ const categoryPostList = ({data , pageContext}) => {
                         {categoryblogs.map((blog) => (
                         <Post column="col-lg-4 col-md-6 col-12 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="0.8s" key={blog.node.fields.slug}
                                 content={{
-                                    ...blog.node.fields, 
+                                    ...blog.node.fields,
                                     ...blog.node.frontmatter,
                                     excerpt: blog.node.excerpt
                                 }}
@@ -40,7 +40,7 @@ const categoryPostList = ({data , pageContext}) => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </>
     )
 }
 

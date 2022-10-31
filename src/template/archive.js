@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from "gatsby";
 import Post from "../components/post";
-import Layout from "../components/layout"; 
+import Layout from "../components/layout";
 
 const Archive = ({data , pageContext}) => {
     const authorblogs = data.allMarkdownRemark.edges;
@@ -9,7 +9,7 @@ const Archive = ({data , pageContext}) => {
     const {author} = pageContext;
     const pageHeader = `${totalCount} Post${(totalCount === 1) ?'':'s'} By <span class="theme-color">${author}</span>`;
     return (
-        <Layout>
+        <>
             <div className="rn-post-list-page rn-section-gap bg-color-white">
                 <div className="container">
                     <div className="col-lg-12">
@@ -40,7 +40,7 @@ const Archive = ({data , pageContext}) => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </>
     )
 }
 

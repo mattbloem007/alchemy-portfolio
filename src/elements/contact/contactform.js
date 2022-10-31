@@ -10,14 +10,14 @@ const ContactForm = ({url}) => {
 		submitting: false,
 		status: null
     });
-    
+
 	const [value, setValue] = useState({
 		name: '',
 		email: '',
 		subject: '',
 		message: ''
     });
-    
+
     const handleServerResponse = (ok, msg, form) => {
 		setServerState({
 			submitting: false,
@@ -33,7 +33,7 @@ const ContactForm = ({url}) => {
 			})
 		}
     };
-    
+
 
     const onSubmit = (data, e) => {
 		const form = e.target;
@@ -44,7 +44,7 @@ const ContactForm = ({url}) => {
 			data
 		})
 			.then(res => {
-				handleServerResponse(true, "Thanks! for being with us", form);
+				handleServerResponse(true, "Thanks! for contacting.. Matthew Gabriel will reply soonest :)", form);
 			})
 			.catch(err => {
 				handleServerResponse(false, err.response.data.error, form);
@@ -56,10 +56,10 @@ const ContactForm = ({url}) => {
 		setValue({ ...value, [e.target.name]: e.target.value })
 	}
 
-    return ( 
+    return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className={`form-group ${(isErrors && errors.name) ? 'has-error' : ''} ${value.name ? 'has-value' : ''}`}>
-                <input 
+                <input
                     type="text"
                     name="name"
                     id="name"
@@ -73,7 +73,7 @@ const ContactForm = ({url}) => {
             </div>
 
             <div className={`form-group ${(isErrors && errors.email) ? 'has-error' : ''} ${value.email ? 'has-value' : ''}`}>
-                <input 
+                <input
                     type="email"
                     name="email"
                     id="email"
@@ -99,8 +99,8 @@ const ContactForm = ({url}) => {
                     ref={register({
                         required: 'Subject Required',
                     })}
-                /> 
-                <label htmlFor="subject">Subject</label> 
+                />
+                <label htmlFor="subject">Subject</label>
                 {errors.subject && <span className="error">{errors.subject.message}</span>}
             </div>
 
@@ -115,7 +115,7 @@ const ContactForm = ({url}) => {
                     })}
                 >
                 </textarea>
-                <label htmlFor="message">Write your message here.</label> 
+                <label htmlFor="message">Write your message here.</label>
                 {errors.message && <span className="error">{errors.message.message}</span>}
             </div>
 
@@ -129,7 +129,7 @@ const ContactForm = ({url}) => {
                     </p>
                 )}
             </div>
-        </form> 
+        </form>
     )
 }
 

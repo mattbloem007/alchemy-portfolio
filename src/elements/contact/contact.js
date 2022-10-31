@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react';
 import Contactform from "./contactform";
 import GooglemapRn from "./googlemap";
+import logo from '../../data/images/logo/logo.png'
 
 const Contact = () => {
     const contactData = useStaticQuery(graphql`
@@ -45,8 +46,8 @@ const Contact = () => {
                     {/* End Contact Form  */}
 
                     <div className="col-lg-6 col-12 mt--70 mt_md--30 mt_sm--40 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1000ms">
-                        <div className="contact-info-list-wrapper">
-                            <GooglemapRn />
+                        <div className="contact-info-list-wrapper" style={{display: "flex", justifyContent: "center"}}>
+                            <img src={logo} />
                         </div>
                     </div>
                 </div>

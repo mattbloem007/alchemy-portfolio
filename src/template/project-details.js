@@ -4,12 +4,15 @@ import Image from "../elements/image";
 import { FiList, FiUser, FiInstagram } from "react-icons/fi";
 import Layout from "../components/layout";
 import { graphql } from 'gatsby'
+import Calltoaction from '../elements/calltoaction/calltoaction'
+
 
 const ProjectDetails = ({data}) => {
     const projectData = data.projectJson;
     const projectImage = data.projectJson.features;
+    const id = data.projectJson.client
     return (
-        <Layout>
+        <>
             <div className="rn-project-details-area rn-section-gap bg-color-white">
                 <div className="container">
                     <div className="row">
@@ -29,6 +32,7 @@ const ProjectDetails = ({data}) => {
                                                     <li><span className="icon"><FiInstagram />Images by:</span><span className="projectinfo">{projectData.imgesBY}</span></li>*/}
                                                 </ul>
                                                 <p className="mt--20">{projectData.body}</p>
+                                                <a href={`/product/${id}`}><Calltoaction title="" buttonText="Join this Journey" /></a>
                                             </div>
                                         </div>
 
@@ -55,7 +59,7 @@ const ProjectDetails = ({data}) => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </>
     )
 }
 

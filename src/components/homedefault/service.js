@@ -50,7 +50,7 @@ const Service = () => {
                                     </div>
                                     <div className="content">
                                         <h4 className="title">Raw Cacao</h4>
-                                        <p>Cacao is the food of the Gods. A SUPERfood, a SOULfood. I supply raw Cacao if you looking to order</p>
+                                        <p>Cacao is the food of the Gods. A SUPERfood, a SOULfood. Matthew Gabriel's beginning awakening was with the help of Cacao </p>
                                     </div>
                                 </div>
                             </div>

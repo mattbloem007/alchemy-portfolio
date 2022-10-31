@@ -5,3 +5,17 @@
  */
 
 // You can delete this file if you're not using it
+
+// const React = require("react")
+// const Layout = require("./src/components/layout").default
+//
+// exports.wrapPageElement = ({ element, props }) => {
+//   // props provide same data to Layout as Page element will get
+//   // including location, data, etc - you don't need to pass it
+//   return <Layout>{element}</Layout>
+// }
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import { WrapPageElement as wrap } from './src/root-wrapper'
+
+export const wrapPageElement = wrap

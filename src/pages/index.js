@@ -10,8 +10,10 @@ import Brand from "../components/homedefault/brand";
 import BlogPost from "../components/blogPost";
 import Contact from "../elements/contact/contact";
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = (props) => {
+console.log("index props", props)
+return(
+  <>
     <SEO title="Alchemy of Remembrance" />
     <Banner />
     <About />
@@ -22,6 +24,7 @@ const IndexPage = () => (
     </div>
     <BlogPost />
     <Contact />
-  </Layout>
+  </>
 )
+}
 export default IndexPage;

@@ -28,6 +28,7 @@ const ProjectOne = () => {
     `);
 
     const projectsData = ProjectData.allProjectJson.edges;
+    console.log("project data", projectsData)
     return (
         <div className="row row--45 mt_dec--30">
             {projectsData.map( data => (

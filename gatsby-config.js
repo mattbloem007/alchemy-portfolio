@@ -1,10 +1,13 @@
+require("dotenv").config();
+
+
 module.exports = {
   siteMetadata: {
     title: `Alchemy of Remembrance`,
     description: `Sangoma || Cacao Kuchina || Health & Longevity || Living to create, learn, and explore the truth.`,
     author: `mattb007`,
     siteUrl: "http://localhost:8000/",
-    getform_url: "https://getform.io/f/7a6695a7-c8e3-442c-bc2f-d46d3b9a535e",
+    getform_url: "https://getform.io/f/d5a562a3-6d7a-43c4-981c-a402161790b2",
   },
 
   mapping: {
@@ -12,6 +15,13 @@ module.exports = {
   },
 
   plugins: [
+    {
+      resolve: "@chec/gatsby-source-chec",
+      options: {
+        publicKey: process.env.NEXT_PUBLIC_CHEC_PUBLIC_KEY,
+        downloadImageAssets: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

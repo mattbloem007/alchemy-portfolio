@@ -1,5 +1,5 @@
 /* ----------------------
-Contact Styles  
+Contact Styles
 ------------------------*/
 .contact-info-list-wrapper {
     .list {
@@ -50,7 +50,7 @@ Contact Styles
         font-family: var(--font-secondary);
         color: #333;
         font-weight: 400;
-    } 
+    }
 
     input ,
     textarea {
@@ -66,6 +66,7 @@ Contact Styles
         letter-spacing: 1.4px;
         width: 100%;
         font-weight: 400;
+        color: white;
         &:focus {
             border: 1px solid var(--color-primary) !important;
             outline: none;
@@ -81,7 +82,7 @@ Contact Styles
             outline: none;
         }
     }
- 
+
     .error {
         color: #f10;
         display: inline-block;
@@ -115,7 +116,7 @@ Contact Styles
 }
 
 /*--------------------------
-    Contact Area Styles  
+    Contact Area Styles
 ----------------------------*/
 
 .rn-contact-area {

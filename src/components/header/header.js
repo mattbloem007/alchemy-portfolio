@@ -4,10 +4,12 @@ import {useStaticQuery, graphql , Link} from 'gatsby';
 import Img from "gatsby-image";
 import Scrollspy from 'react-scrollspy';
 import Image from "../../elements/image";
+import CartNav from './cartnav'
 
 // Start Header Area
-const Header = () => {
+const Header = (props) => {
 
+    let {cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart} = props
 
     const headerQuery = useStaticQuery(graphql`
         query headerQuery {
@@ -60,7 +62,7 @@ const Header = () => {
                             {/* Start Mainmenu Area  */}
                             <div className="col-lg-9">
                                 <div className="menu_wrapper">
-                                    <Scrollspy className="mainmenuwrapper" items={['home','about', 'portfolio',  'news' , 'contact']} currentClassName="is-current" offset={-200}>
+                                    <Scrollspy className="mainmenuwrapper" items={['home','about', 'portfolio',  'news' , 'offerings', 'contact']} currentClassName="is-current" offset={-200}>
                                         <li>
                                             <a className="menu-hover-link" href="/#home">
                                                 <span className="hover-item">
@@ -94,11 +96,28 @@ const Header = () => {
                                         </li>
 
                                         <li>
+                                            <a className="menu-hover-link" href="/product-archive">
+                                                <span className="hover-item">
+                                                    <span data-text="Offerings">Offerings</span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
                                             <a className="menu-hover-link" href="/#contact">
                                                 <span className="hover-item">
                                                     <span data-text="Contact">Contact</span>
                                                 </span>
                                             </a>
+                                        </li>
+                                        <li>
+                                          <CartNav
+                                            cart={cart}
+                                            onUpdateCartQty={onUpdateCartQty}
+                                            onRemoveFromCart={onRemoveFromCart}
+                                            onEmptyCart={onEmptyCart}
+                                            scroll={scroll}
+                                            />
                                         </li>
 
                                     </Scrollspy>

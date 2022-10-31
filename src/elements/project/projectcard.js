@@ -6,12 +6,13 @@ import Img from 'gatsby-image'
 
 const Projectcard = ({image, id, title, category, column}) => {
     let projectImg;
+    console.log(image)
     if(image.fixed && typeof image.fixed !== 'function'){
         projectImg = <Img fixed={image.fixed} alt={title}/>;
     } else if(image.fluid){
         projectImg = <Image fluid={image.fluid} alt={title}/>
     } else{
-        projectImg = <img src={image.src} alt={title}/>
+        projectImg = <img src={image} alt={title}/>
     }
     return (
         <div className={column}>
