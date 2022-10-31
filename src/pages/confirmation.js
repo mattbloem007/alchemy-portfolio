@@ -31,8 +31,8 @@ const Confirmation = (props, {data}) => {
                             <div className="col-lg-12">
                                 <div className="inner">
                                     <h1 className="theme-color">Order Confirmed</h1>
-                                    <h4>Thank you for your purchase, {order.customer.firstname} {order.customer.lastname}!</h4>
-                                    <span>Order ref:</span> {order.customer_reference}
+                                    <h4>Thank you for your purchase, {order.customer && order.customer.firstname} {order.customer && order.customer.lastname}!</h4>
+                                    <span>Order ref:</span> {order.customer_reference && order.customer_reference}
                                     <br/>
                                     <br/>
                                     <a className="rn-button" href="/">Go Back</a>

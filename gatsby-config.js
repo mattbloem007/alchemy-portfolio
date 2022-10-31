@@ -19,7 +19,7 @@ module.exports = {
       resolve: "@chec/gatsby-source-chec",
       options: {
         publicKey: process.env.NEXT_PUBLIC_CHEC_PUBLIC_KEY,
-        downloadImageAssets: true,
+        //downloadImageAssets: true,
       },
     },
     {

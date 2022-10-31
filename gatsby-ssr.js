@@ -15,6 +15,11 @@
 //   return <Layout>{element}</Layout>
 // }
 
-import { WrapPageElement as wrap } from './src/root-wrapper'
+import Alchemy from './src/root-wrapper'
+import React from 'react'
 
-export const wrapPageElement = wrap
+const Wrapper = ({ element }) => {
+  return <Alchemy element={element} />
+}
+
+export const wrapPageElement = Wrapper

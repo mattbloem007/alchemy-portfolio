@@ -6,11 +6,8 @@ module.exports = [{
       options: {"plugins":[],"offset":-100},
     },{
       plugin: require('../node_modules/gatsby-remark-images/gatsby-browser.js'),
-      options: {"plugins":[],"maxWidth":1920,"linkImagesToOriginal":true,"showCaptions":false,"markdownCaptions":false,"backgroundColor":"white","quality":50,"withWebp":false,"withAvif":false,"tracedSVG":false,"loading":"lazy","decoding":"async","disableBgImageOnAlpha":false,"disableBgImage":false},
+      options: {"plugins":[],"maxWidth":1920,"linkImagesToOriginal":true,"showCaptions":false,"markdownCaptions":false,"sizeByPixelDensity":false,"backgroundColor":"white","quality":50,"withWebp":false,"tracedSVG":false,"loading":"lazy","disableBgImageOnAlpha":false,"disableBgImage":false},
     },{
       plugin: require('../gatsby-browser.js'),
-      options: {"plugins":[]},
-    },{
-      plugin: require('../node_modules/gatsby/dist/internal-plugins/partytown/gatsby-browser.js'),
       options: {"plugins":[]},
     }]

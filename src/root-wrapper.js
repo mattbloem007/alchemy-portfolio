@@ -2,7 +2,7 @@ import React, {useEffect, useState } from 'react'
 import Layout from './components/layout'
 import commerce from './lib/Commerce';
 
-export const WrapPageElement = (props) => {
+const Alchemy = (props) => {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
 //  const [product, setProduct] = useState({});
@@ -125,3 +125,5 @@ export const WrapPageElement = (props) => {
       </div>
   )
 }
+
+export default Alchemy
