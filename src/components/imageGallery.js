@@ -7,7 +7,6 @@ class ImageGalleryComponent extends React.Component {
             <div>
                 <Carousel interval="500" transitionTime="500">
                 {this.props.images ? this.props.images.map(image => {
-                  console.log("images", image)
                   return (
                     <div>
                         <img src={image.url} />

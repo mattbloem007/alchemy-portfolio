@@ -6,7 +6,6 @@ import Calltoaction from '../elements/calltoaction/calltoaction'
 
 
 const Cart = (props) => {
-  console.log("In cart", props)
   let { cart, onUpdateCartQty, onEmptyCart, onRemoveFromCart} = props
 
   const handleUpdateCartQty = (lineItemId, quantity) => {

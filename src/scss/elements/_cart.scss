@@ -109,6 +109,16 @@
             margin-bottom: 0;
             font-size: 1rem;
             color: var(--color-white);
+            @media #{$lg-layout} {
+              flex-direction: row;
+            }
+            @media #{$md-layout} {
+              flex-direction: row;
+
+            }
+            @media #{$sm-layout} {
+              flex-direction: row;
+            }
 
             button {
                 border: none;

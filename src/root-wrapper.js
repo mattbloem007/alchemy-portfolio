@@ -5,6 +5,9 @@ import commerce from './lib/Commerce';
 const Alchemy = (props) => {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
+  const [isCartVisible, setCartVisible] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
 //  const [product, setProduct] = useState({});
 
   const fetchCart = () => {
@@ -13,6 +16,14 @@ const Alchemy = (props) => {
     }).catch((error) => {
       console.log('There was an error fetching the cart', error);
     });
+  }
+
+  const setCartVisibility = () => {
+    setCartVisible(!isCartVisible)
+  }
+
+  const setOverlay = () => {
+    setIsOverlayOpen(!isOverlayOpen)
   }
 
   const returnProduct = (product) => {
@@ -107,7 +118,11 @@ const Alchemy = (props) => {
       onRemoveFromCart: handleRemoveFromCart,
       onEmptyCart: handleEmptyCart,
       onCaptureCheckout: handleCaptureCheckout,
-      fetchProduct: fetchProduct
+      fetchProduct: fetchProduct,
+      isCartVisible: isCartVisible,
+      setCartVisible: setCartVisibility,
+      isOverlayOpen: isOverlayOpen,
+      setOverlay: setOverlay
     })
   );
 
@@ -119,6 +134,10 @@ const Alchemy = (props) => {
           onRemoveFromCart={handleRemoveFromCart}
           onEmptyCart={handleEmptyCart}
           fetchProduct={fetchProduct}
+          isCartVisible={isCartVisible}
+          setCartVisible={setCartVisibility}
+          isOverlayOpen={isOverlayOpen}
+          setOverlay={setOverlay}
           >
           {elementWithProps}
         </Layout>

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
 const CartItem = (props) => {
-  console.log("In item", props)
   let { item, onUpdateCartQty, onEmptyCart, onRemoveFromCart } = props
   let [loading, setLoading] = useState(false)
 

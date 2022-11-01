@@ -8,11 +8,37 @@ import '../scss/style.scss';
 
 const Layout = (props) => {
   console.log(";ayout props", props)
-  let {children, cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart} = props
+  let {
+    children,
+    cart,
+    onUpdateCartQty,
+    onRemoveFromCart,
+    onEmptyCart,
+    isCartVisible,
+    setCartVisible,
+    isOverlayOpen,
+    setOverlay
+  } = props
   return (
     <div className="main-wrapper active-dark">
-        <Header cart={cart} onUpdateCartQty={onUpdateCartQty} onRemoveFromCart={onRemoveFromCart} onEmptyCart={onEmptyCart}/>
-        <HeaderSidebar cart={cart} onUpdateCartQty={onUpdateCartQty} onRemoveFromCart={onRemoveFromCart} onEmptyCart={onEmptyCart} />
+        <Header
+        cart={cart}
+        onUpdateCartQty={onUpdateCartQty}
+        onRemoveFromCart={onRemoveFromCart}
+        onEmptyCart={onEmptyCart}
+        isCartVisible={isCartVisible}
+        setCartVisible={setCartVisible}
+        />
+        <HeaderSidebar
+        cart={cart}
+        onUpdateCartQty={onUpdateCartQty}
+        onRemoveFromCart={onRemoveFromCart}
+        onEmptyCart={onEmptyCart}
+        isCartVisible={isCartVisible}
+        setCartVisible={setCartVisible}
+        isOverlayOpen={isOverlayOpen}
+        setOverlay={setOverlay}
+        />
         <main>{children}</main>
         <Footer />
     </div>

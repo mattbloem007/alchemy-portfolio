@@ -7,6 +7,7 @@ import Calltoaction from '../elements/calltoaction/calltoaction'
 import Collapsible from "react-collapsible-paragraph";
 import ImageGalleryComponent from '../components/imageGallery'
 import commerce from '../lib/Commerce';
+import { isMobile } from "react-device-detect";
 
 const Product = (props) => {
     console.log("Data", props)
@@ -18,21 +19,17 @@ const Product = (props) => {
     useEffect(() => {
       commerce.products.retrieve(data.checProduct.id)
       .then(product => setProduct(product.assets))
-      // const fetchData = async () => {
-      //   console.log("fetching products")
-      //
-      //   let prod = await props.fetchProduct(data.checProduct.id)
-      //   console.log("got products", prod)
-      //   setProduct(prod)
-      // }
-      //
-      // // call the function
-      // fetchData()
-      // .catch(console.error);
     }, []);
 
     const handleAddToCart = () => {
       props.onAddToCart(data.checProduct.id, 1);
+      if (isMobile && props.isOverlayOpen == false) {
+        props.setOverlay(true)
+        document.querySelector('.trigger-popup-menu').classList.toggle('overlay-wrapper-open');
+        document.querySelector('.hambergur-menu').classList.toggle('hambergur-menu-open');
+      }
+      props.setCartVisible(!props.isCartVisible)
+
     }
 
     const htmlToText = (html) => {

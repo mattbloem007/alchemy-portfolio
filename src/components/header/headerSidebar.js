@@ -25,8 +25,17 @@ const HeaderNoSidebar = (props) => {
         }
     `);
 
-    const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-    let {cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart} = props
+  //  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+    let {
+      cart,
+      onUpdateCartQty,
+      onRemoveFromCart,
+      onEmptyCart,
+      isCartVisible,
+      setCartVisible,
+      isOverlayOpen,
+      setOverlay
+    } = props
 
 
 
@@ -38,7 +47,7 @@ const HeaderNoSidebar = (props) => {
     });
 
     const onMenuToggleClick = () => {
-        setIsOverlayOpen(prevState => !prevState)
+        setOverlay(prevState => !prevState)
         document.querySelector('.trigger-popup-menu').classList.toggle('overlay-wrapper-open');
         document.querySelector('.hambergur-menu').classList.toggle('hambergur-menu-open');
     };
@@ -135,6 +144,10 @@ const HeaderNoSidebar = (props) => {
                                 onRemoveFromCart={onRemoveFromCart}
                                 onEmptyCart={onEmptyCart}
                                 scroll={scroll}
+                                isCartVisible={isCartVisible}
+                                setCartVisible={setCartVisible}
+                                isOverlayOpen={isOverlayOpen}
+                                setOverlay={setOverlay}
                                 />
                             </li>
                         </Scrollspy>

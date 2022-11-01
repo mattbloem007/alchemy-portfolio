@@ -9,7 +9,7 @@ import CartNav from './cartnav'
 // Start Header Area
 const Header = (props) => {
 
-    let {cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart} = props
+    let {cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart, isCartVisible, setCartVisible} = props
 
     const headerQuery = useStaticQuery(graphql`
         query headerQuery {
@@ -117,6 +117,8 @@ const Header = (props) => {
                                             onRemoveFromCart={onRemoveFromCart}
                                             onEmptyCart={onEmptyCart}
                                             scroll={scroll}
+                                            isCartVisible={isCartVisible}
+                                            setCartVisible={setCartVisible}
                                             />
                                         </li>
 
