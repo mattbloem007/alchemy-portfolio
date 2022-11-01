@@ -4,6 +4,34 @@
     right: 3.25rem;
     z-index: 999;
 
+    @media #{$lg-layout} {
+      left: 3.25rem;
+
+      &.cart-btn-open {
+          border: none;
+          display: flex;
+          width: 250px;
+      }
+    }
+    @media #{$md-layout} {
+      left: 3.25rem;
+
+      &.cart-btn-open {
+          border: none;
+          display: flex;
+          width: 250px;
+      }
+    }
+    @media #{$sm-layout} {
+      left: 3.25rem;
+
+      &.cart-btn-open {
+          border: none;
+          display: flex;
+          width: 250px;
+      }
+    }
+
     &.cartBadge {
         span {
             font-size: 14px;
@@ -17,7 +45,7 @@
         }
     }
 
-    &.cart-open {
+    &.cart-btn-open {
         border: none;
     }
 
@@ -41,6 +69,35 @@
   top: 1rem;
   right: 3.25rem;
   z-index: 999;
+
+  @media #{$lg-layout} {
+    left: 3.25rem;
+
+    &.cart-btn-open {
+        border: none;
+        display: flex;
+        width: 250px;
+    }
+  }
+  @media #{$md-layout} {
+    left: 3.25rem;
+
+    &.cart-btn-open {
+        border: none;
+        display: flex;
+        width: 250px;
+    }
+  }
+  @media #{$sm-layout} {
+    left: 3.25rem;
+
+    &.cart-btn-open {
+        border: none;
+        display: flex;
+        width: 250px;
+    }
+  }
+
 }
 
 .cartBadge {
@@ -52,4 +109,14 @@
         margin-left: -0.1rem;
         border-radius: 50%;
         vertical-align: super;
+
+        @media #{$lg-layout} {
+          padding: 0 0.85rem;
+        }
+        @media #{$md-layout} {
+          padding: 0 0.85rem;
+        }
+        @media #{$sm-layout} {
+          padding: 0 0.85rem;
+        }
 }

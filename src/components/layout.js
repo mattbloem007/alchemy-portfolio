@@ -12,7 +12,7 @@ const Layout = (props) => {
   return (
     <div className="main-wrapper active-dark">
         <Header cart={cart} onUpdateCartQty={onUpdateCartQty} onRemoveFromCart={onRemoveFromCart} onEmptyCart={onEmptyCart}/>
-        <HeaderSidebar />
+        <HeaderSidebar cart={cart} onUpdateCartQty={onUpdateCartQty} onRemoveFromCart={onRemoveFromCart} onEmptyCart={onEmptyCart} />
         <main>{children}</main>
         <Footer />
     </div>

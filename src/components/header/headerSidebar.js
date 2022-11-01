@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import {useStaticQuery, graphql , Link} from 'gatsby';
 import Img from "gatsby-image";
 import Scrollspy from 'react-scrollspy';
+import CartNav from './cartnav'
 
-// Start Header Area 
-const HeaderNoSidebar = () => {
+// Start Header Area
+const HeaderNoSidebar = (props) => {
     const headerQuerySidebar = useStaticQuery(graphql`
         query headerQuerySidebarQuery {
             allMenuJson {
@@ -25,6 +26,7 @@ const HeaderNoSidebar = () => {
     `);
 
     const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+    let {cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart} = props
 
 
 
@@ -67,7 +69,7 @@ const HeaderNoSidebar = () => {
                         <div className="hambergur-menu">
                             <div className="hamburger-box">
                                 <div className="hamburger-inner">
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -104,19 +106,36 @@ const HeaderNoSidebar = () => {
                             </li>
 
                             <li>
-                                <a className="menu-hover-link" href="/#news" onClick={onMenuToggleClick}>
+                                <a className="menu-hover-link" href="/#readings" onClick={onMenuToggleClick}>
                                     <span className="hover-item">
-                                        <span data-text="News">News</span>
+                                        <span data-text="Readings">Readings</span>
                                     </span>
                                 </a>
                             </li>
-                            
+
+                            <li>
+                                <a className="menu-hover-link" href="/product-archive" onClick={onMenuToggleClick}>
+                                    <span className="hover-item">
+                                        <span data-text="Offerings">Offerings</span>
+                                    </span>
+                                </a>
+                            </li>
+
                             <li>
                                 <a className="menu-hover-link" href="/#contact" onClick={onMenuToggleClick}>
                                     <span className="hover-item">
                                         <span data-text="Contact">Contact</span>
                                     </span>
                                 </a>
+                            </li>
+                            <li>
+                              <CartNav
+                                cart={cart}
+                                onUpdateCartQty={onUpdateCartQty}
+                                onRemoveFromCart={onRemoveFromCart}
+                                onEmptyCart={onEmptyCart}
+                                scroll={scroll}
+                                />
                             </li>
                         </Scrollspy>
                     </div>
@@ -129,7 +148,7 @@ const HeaderNoSidebar = () => {
         </Fragment>
     )
 }
-// End Header Area 
+// End Header Area
 
 HeaderNoSidebar.propTypes = {
   siteTitle: PropTypes.string,

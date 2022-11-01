@@ -4,7 +4,7 @@
 
 
 
-/* 
+/*
 font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Kaushan Script', cursive;
@@ -18,6 +18,57 @@ font-family: 'Mulish', sans-serif;
     content: " ";
     display: table;
 }
+
+.cartContainer {
+  padding: 20px;
+  @media (min-width: 1200px){
+      max-width: 1400px;
+    }
+  @media #{$lg-layout} {
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 700px;
+    padding: 0px;
+  }
+  @media #{$md-layout} {
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 700px;
+    padding: 0px;
+
+  }
+  @media #{$sm-layout} {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 700px;
+    padding: 0px;
+  }
+}
+
+.row{
+
+  &.cartButtonContainer {
+    justify-content: space-between;
+  @media #{$lg-layout} {
+    justify-content: center;
+  }
+  @media #{$md-layout} {
+    justify-content: center;
+
+  }
+  @media #{$sm-layout} {
+    justify-content: center;
+  }
+}}
+
 .clearfix:after {
     clear: both;
 }
@@ -37,7 +88,7 @@ font-family: 'Mulish', sans-serif;
 
 
 /*===============================
-    Background Color 
+    Background Color
 =================================*/
 
 @include config-bg-colors('bg-color-',
@@ -48,7 +99,7 @@ font-family: 'Mulish', sans-serif;
     'white'#FFFFFF,
     'grey'#f8f9fa,
     'extra05'var(--color-extra05)
-    
+
 
 );
 
@@ -57,7 +108,7 @@ font-family: 'Mulish', sans-serif;
 
 
 /*===========================
-    Background Image 
+    Background Image
 =============================*/
 
 .bg_image {
@@ -449,7 +500,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*=============================
-	Overlay styles 
+	Overlay styles
 ==============================*/
 
 [data-overlay],
@@ -513,7 +564,7 @@ textarea:-ms-input-placeholder {
 
 
 /*------------------------------
-    Scroll Up 
+    Scroll Up
 --------------------------------*/
 
 #scrollUp {
@@ -575,7 +626,7 @@ textarea:-ms-input-placeholder {
         height: 60px;
         line-height: 60px;
     }
-    
+
     span {
         &.text {
             position: relative;
@@ -608,7 +659,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*--------------------
-    Contact Form 
+    Contact Form
 ----------------------*/
 .form-message {
     margin-bottom: 0;

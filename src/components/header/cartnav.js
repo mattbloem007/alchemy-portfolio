@@ -8,10 +8,12 @@ const CartNav = (props) => {
   let { cart, onRemoveFromCart, onUpdateCartQty, onEmptyCart, scroll } = props
 
   const renderOpenButton = () => (
-    <div className={scroll ? "cartnav2 cart-btn--open" : "cartnav cart-btn--open"}>
+  <div>
+    <div className={scroll ? "cartnav2 cart-btn-open" : "cartnav cart-btn-open"}>
       <FaShoppingBag size={28} style={{color: "white"}}/>
       {cart ? <span className="cartBadge">{cart.total_items}</span> : ''}
     </div>
+  </div>
   );
 
   const renderCloseButton = () => (

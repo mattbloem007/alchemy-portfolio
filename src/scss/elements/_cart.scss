@@ -78,6 +78,16 @@
         display: flex;
         padding: 1.25rem;
         align-items: center;
+        @media #{$lg-layout} {
+          flex-direction: column;
+        }
+        @media #{$md-layout} {
+          flex-direction: column;
+
+        }
+        @media #{$sm-layout} {
+          flex-direction: column;
+        }
 
         &.image {
             width: 9rem;

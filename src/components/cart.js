@@ -8,7 +8,7 @@ import Calltoaction from '../elements/calltoaction/calltoaction'
 const Cart = (props) => {
   console.log("In cart", props)
   let { cart, onUpdateCartQty, onEmptyCart, onRemoveFromCart} = props
-  
+
   const handleUpdateCartQty = (lineItemId, quantity) => {
     onUpdateCartQty(lineItemId, quantity);
   }
@@ -70,7 +70,7 @@ const Cart = (props) => {
 
   }
     return (
-      <div className="container" style={{background: "#000000", paddingTop: "20px", borderRadius: "20px"}}>
+      <div className="cartContainer" style={{background: "#000000", paddingTop: "20px", borderRadius: "20px"}}>
           <div className="col-lg-12">
               <div className="page-top">
                   <h1 className="title_holder">Your Shopping Cart</h1>
@@ -81,7 +81,7 @@ const Cart = (props) => {
 
           <div className="col-lg-12" style={{justifyContent: "space-between"}}>
             { renderTotal() }
-            <div className="row" style={{justifyContent: "space-between"}}>
+            <div className="row cartButtonContainer">
               <Calltoaction title="" buttonText="Empty Cart" action={handleEmptyCart} />
               <a href="/checkout"><Calltoaction title="" buttonText="Checkout"  /></a>
             </div>
