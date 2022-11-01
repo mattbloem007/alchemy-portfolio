@@ -60,7 +60,7 @@ const Cart = (props) => {
       return(
         <div className="row" style={{justifyContent: "space-between"}}>
           <p>Subtotal:</p>
-          <p>{cart.subtotal.formatted_with_symbol}</p>
+          <p style={{fontWeight: "bold"}}>{cart.subtotal.formatted_with_symbol}</p>
         </div>
       );
     }

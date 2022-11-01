@@ -30,7 +30,7 @@ font-family: 'Mulish', sans-serif;
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 700px;
+    height: 1000px;
     padding: 0px;
   }
   @media #{$md-layout} {
@@ -59,13 +59,16 @@ font-family: 'Mulish', sans-serif;
     justify-content: space-between;
   @media #{$lg-layout} {
     justify-content: center;
+    margin-left: 0px;
   }
   @media #{$md-layout} {
     justify-content: center;
+    margin-left: 0px;
 
   }
   @media #{$sm-layout} {
     justify-content: center;
+    margin-left: 0px;
   }
 }}
 
