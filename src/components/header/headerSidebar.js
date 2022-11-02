@@ -123,7 +123,7 @@ const HeaderNoSidebar = (props) => {
                             </li>
 
                             <li>
-                                <a className="menu-hover-link" href="/product-archive" onClick={onMenuToggleClick}>
+                                <a className="menu-hover-link" href="/offerings" onClick={onMenuToggleClick}>
                                     <span className="hover-item">
                                         <span data-text="Offerings">Offerings</span>
                                     </span>

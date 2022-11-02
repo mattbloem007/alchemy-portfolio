@@ -96,7 +96,7 @@ const Header = (props) => {
                                         </li>
 
                                         <li>
-                                            <a className="menu-hover-link" href="/product-archive">
+                                            <a className="menu-hover-link" href="/offerings">
                                                 <span className="hover-item">
                                                     <span data-text="Offerings">Offerings</span>
                                                 </span>
