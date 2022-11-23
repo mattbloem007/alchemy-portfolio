@@ -89,7 +89,7 @@ const HeaderNoSidebar = (props) => {
             <div className="trigger-popup-menu">
                 <div className="menu_full">
                     <div className="menu_wrapper">
-                        <Scrollspy className="popup_mainmenu" items={['home','about', 'portfolio' , 'news' , 'contact']} currentClassName="is-current" offset={-200}>
+                        <Scrollspy className="popup_mainmenu" items={['home','about', 'portfolio' , 'readings' , 'contact']} currentClassName="is-current" offset={-200}>
                             <li>
                                 <a className="menu-hover-link" href="/#home" onClick={onMenuToggleClick}>
                                     <span className="hover-item">
@@ -115,7 +115,7 @@ const HeaderNoSidebar = (props) => {
                             </li>
 
                             <li>
-                                <a className="menu-hover-link" href="/#readings" onClick={onMenuToggleClick}>
+                                <a className="menu-hover-link" href="/#news" onClick={onMenuToggleClick}>
                                     <span className="hover-item">
                                         <span data-text="Readings">Readings</span>
                                     </span>

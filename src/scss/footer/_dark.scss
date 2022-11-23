@@ -1,6 +1,17 @@
 /*-----------------------
-    Dark Home Style  
+    Dark Home Style
 ------------------------*/
+
+.remembrance {
+    font-size: 67px !important;
+    @media #{$sm-layout} {
+        font-size: 60px !important;
+    }
+
+    @media #{$large-mobile} {
+        font-size: 39px !important;
+    }
+}
 
 .active-dark {
     background-color: #000;
@@ -227,13 +238,10 @@
 .rn-slider-area .thumbnail::before {
     background: #000;
 }
-.active-dark .form-group input:focus, 
+.active-dark .form-group input:focus,
 .active-dark .form-group textarea:focus {
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 .active-dark .rn-project-details-area .portfolio-content .content-left ul.list_holder li span.projectinfo {
     color: #bbb;
 }
-
-
-

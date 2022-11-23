@@ -1,7 +1,7 @@
 [
     {
         "name": "main-banner",
-        "title": "The Alchemy of <span class='color-primary' style=\"font-size: 67px;\">Remembrance</span>",
+        "title": "The Alchemy of <span class='remembrance'>Remembrance</span>",
         "subtitle": "Living to create, learn, and explore the truth",
         "bgImage": "./images/banner/bg-image-02.jpg",
         "image": "./images/banner/person-image.jpg"
@@ -11,8 +11,8 @@
         "name": "about",
         "title": "Matthew Gabriel",
         "subtitle": "Traditional Medicine Man || Cacao Kuchina",
-        "description": "Matthew Gabriel (MG) is a qualified medicine man (Sangoma and Cacao Kuchina), working with cellular nutrition a medicinal gateway to embodied Bliss.",
-        "description2": "He has been working with sacramental medicines for 5 years - is a way finder of Truth, guided by the alchemy of human biology, plant nutrition, and computer technology.",
+        "description": "My name is Matthew Gabriel (MG). I am an initiated medicine man (Sangoma and Cacao Kuchina), working with cellular nutrition; a medicinal gateway to embodied Bliss.",
+        "description2": "I have been working with sacramental medicines since my trainings in 2017 - am a way finder of Truth, guided by the alchemy of human biology, plant nutrition, and computer technology.",
         "downloadButton": "Download CV",
         "linkBUtton": "Send Message",
         "aboutData": [
