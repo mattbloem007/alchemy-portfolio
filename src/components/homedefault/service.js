@@ -18,7 +18,10 @@ const Service = () => {
                                     </div>
                                     <div className="content">
                                         <h4 className="title">ixCacao Journeys</h4>
-                                        <p>Nutritional Immersions with cacao as a superfood and soulfood. Deepening your relationship with the body</p>
+                                        <p>Nutritional Immersions with cacao as a superfood and soulfood. Deepening your relationship with the body
+                                        <br/>
+                                          <a href="/online-ixcacao-nutritional-immersions" style={{textDecoration: "underline", color: "orange"}}>Learn more...</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
