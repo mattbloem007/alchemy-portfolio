@@ -13,7 +13,7 @@ const Checkout = (props) => {
   const [country, setShippingCountry] = useState({country: 'ZA'})
   const [options, setShippingOptions] = useState({})
   const [option, setShippingOption] = useState({})
-  const [live, setLive] = useState({})
+  //const [live, setLive] = useState({})
   const [total, setTotal] = useState({})
   const mounted = useRef();
 
@@ -44,7 +44,7 @@ const Checkout = (props) => {
         console.log("fetching options", country.country, checkoutToken)
         fetchShippingOptions(checkoutToken.id, country.country);
         fetchShippingCountries(checkoutToken.id)
-        getLiveInfo()
+      //  getLiveInfo()
       }
     }
 
@@ -71,18 +71,18 @@ const Checkout = (props) => {
     }
   }
 
-  const getLiveInfo = () =>{
-        if (checkoutToken) {
-        return commerce.checkout.getLive(checkoutToken)
-          .then((live) => {
-            console.log("live", live)
-            setLive(live)
-          })
-          .catch((error) => {
-            console.log('There was an error in generating a token', error);
-          });
-    }
-  }
+  // const getLiveInfo = () =>{
+  //       if (checkoutToken) {
+  //       return commerce.checkout.getLive(checkoutToken)
+  //         .then((live) => {
+  //           console.log("live", live)
+  //           setLive(live)
+  //         })
+  //         .catch((error) => {
+  //           console.log('There was an error in generating a token', error);
+  //         });
+  //   }
+  // }
 
   const fetchShippingCountries = (checkoutTokenId) => {
     console.log("checkoutTokenId", checkoutTokenId)
@@ -147,7 +147,7 @@ const Checkout = (props) => {
                   shippingOptions={options}
                   shippingCountries={allCountries}
                   shippingSubdivisions={subdivisions}
-                  live={live}
+    //              live={live}
                   onCaptureCheckout={props.onCaptureCheckout}
                   cart={props.cart}
     />

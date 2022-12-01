@@ -14,7 +14,7 @@ const IndexPage = (props) => {
 console.log("index props", props)
 return(
   <>
-    <SEO title="Alchemy of Remembrance" />
+    <SEO title="Cacao Ceremony" description="Searching for a New Way to Bring Extra Energy into Your Life?" />
     <Banner />
     <About />
     <Service />

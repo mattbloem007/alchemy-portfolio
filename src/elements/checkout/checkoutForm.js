@@ -23,7 +23,7 @@ const CheckoutForm = ({firstName,
   checkoutToken,
   sanitizedLineItems,
   cart,
-  live,
+//  live,
   onCaptureCheckout
 }) => {
     const { register, handleSubmit, errors } = useForm({
@@ -177,7 +177,7 @@ const CheckoutForm = ({firstName,
     onCaptureCheckout(checkoutToken.id, orderData);
   };
 
-  if (Object.entries(cart).length !== 0 && Object.entries(live).length !== 0) {
+  if (Object.entries(cart).length !== 0) { //&& Object.entries(live).length !== 0) {
     componentProps = {
       email: value.email,
       amount: parseFloat(cart.subtotal.raw) * 100,
@@ -185,7 +185,7 @@ const CheckoutForm = ({firstName,
       //   name,
       //   phone,
       // },
-      currency: live.currency.code,
+      currency: "ZAR",
       publicKey: "pk_live_b10691dc007bf4e394d92f0ad75f996e327736c6",
       text: "Pay Now",
       onSuccess,

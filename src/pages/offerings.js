@@ -2,12 +2,14 @@ import React from 'react';
 import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
 import ProductOne from "../elements/product/productOne";
+import SEO from "../components/seo";
 
 
 const ProductArchive = (props, {data}) => {
     console.log("Props", props)
     return (
         <>
+        <SEO title="Ceremonial Cacao" description="Revitalize your energy" />
         <div className="rn-post-list-page rn-section-gap bg-color-white">
             <div className="container">
                 <div className="col-lg-12">
