@@ -137,7 +137,7 @@ const CheckoutForm = ({firstName,
   }
 
   const handleCaptureCheckout = (ref) => {
-    console.log("VALUE", value.firstName, value)
+
     const orderData = {
       line_items: sanitizedLineItems(cart.line_items),
       customer: {
@@ -181,10 +181,6 @@ const CheckoutForm = ({firstName,
     componentProps = {
       email: value.email,
       amount: parseFloat(cart.subtotal.raw) * 100,
-      // metadata: {
-      //   name,
-      //   phone,
-      // },
       currency: "ZAR",
       publicKey: "pk_live_b10691dc007bf4e394d92f0ad75f996e327736c6",
       text: "Pay Now",
